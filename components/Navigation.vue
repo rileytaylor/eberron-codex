@@ -9,24 +9,24 @@
 
         <b-collapse is-nav id="nav_collapse">
             <b-nav is-nav-bar>
-                <b-nav-item href="#">Home</b-nav-item>
-                <b-nav-item href="#">Rules</b-nav-item>
-                <b-nav-item href="#">LIbrary</b-nav-item>
+                <b-nav-item href="index">Home</b-nav-item>
+                <b-nav-item href="rules">Rules</b-nav-item>
+                <b-nav-item href="library">Library</b-nav-item>
                 <b-nav-item-dropdown text="Player Options">
-                    <b-dropdown-item href="#">Races</b-dropdown-item>
-                    <b-dropdown-item href="#">Classes</b-dropdown-item>
-                    <b-dropdown-item href="#">Backgrounds</b-dropdown-item>
-                    <b-dropdown-item href="#">Feats</b-dropdown-item>
+                    <b-dropdown-item href="races">Races</b-dropdown-item>
+                    <b-dropdown-item href="classes">Classes</b-dropdown-item>
+                    <b-dropdown-item href="backgrounds">Backgrounds</b-dropdown-item>
+                    <b-dropdown-item href="feats">Feats</b-dropdown-item>
                 </b-nav-item-dropdown>
                 <b-nav-item-dropdown text="References">
-                    <b-dropdown-item href="#">Monsters</b-dropdown-item>
-                    <b-dropdown-item href="#">Items</b-dropdown-item>
-                    <b-dropdown-item href="#">Spells</b-dropdown-item>
-                    <b-dropdown-item href="#">Conditions</b-dropdown-item>
+                    <b-dropdown-item href="monsters">Monsters</b-dropdown-item>
+                    <b-dropdown-item href="items">Items</b-dropdown-item>
+                    <b-dropdown-item href="spells">Spells</b-dropdown-item>
+                    <b-dropdown-item href="conditions">Conditions</b-dropdown-item>
                 </b-nav-item-dropdown>
             </b-nav>
 
-            <b-nav is-nav-bar class="ml-auto">
+            <!--<b-nav is-nav-bar class="ml-auto">
                 <b-nav-item-dropdown text="DM Tools" right>
                     <b-dropdown-item href="#">CR Calculator</b-dropdown-item>
                     <b-dropdown-item href="#">Encounter Builder</b-dropdown-item>
@@ -37,7 +37,7 @@
                     <b-dropdown-item href="#">Stat Block to JSON</b-dropdown-item>
                     <b-dropdown-item href="#">WYSIWTG Editor</b-dropdown-item>
                 </b-nav-item-dropdown>
-            </b-nav>
+            </b-nav>-->
         </b-collapse>
 
     </b-navbar>
