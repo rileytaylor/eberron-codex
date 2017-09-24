@@ -13,6 +13,9 @@
 <script>
 import List from '~/components/List.vue'
 import Detail from '~/components/Detail.vue'
+import endpoints from '~/store/endpoints'
+import { mapActions } from 'vuex'
+
 
 export default {
     data () {
@@ -27,6 +30,14 @@ export default {
     components: {
         List,
         Detail
+    },
+    methods: {
+        ...mapActions([
+            'getData'
+        ])
+    },
+    mounted () {
+        this.getData({ stateName:'races', endpoint: endpoints.races })
     }
 
 }

@@ -22,10 +22,16 @@ module.exports = {
       app: 'app.[chunkhash].js'
     }
   },
+  css: [
+    'vue-multiselect/dist/vue-multiselect.min.css'
+  ],
   modules: [
     '@nuxtjs/bootstrap-vue'
   ],
   vendor: [
     'vue-multiselect'
+  ],
+  plugins: [
+    '~/plugins/vue-resource'
   ]
 }

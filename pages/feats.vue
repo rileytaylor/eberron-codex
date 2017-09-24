@@ -22,9 +22,8 @@ export default {
         ])
     },
     mounted () {
-        this.getData({ stateName:'rules', endpoint: endpoints.rules })
+        this.getData({ stateName:'feats', endpoint: endpoints.feats })
     }
-
 }
 </script>
 

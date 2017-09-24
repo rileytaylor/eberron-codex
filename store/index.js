@@ -15,6 +15,18 @@ const store = () => new Vuex.Store({
     races: {},
     rules: {},
     spells: {}
+  },
+  mutations: {
+    setData (state, { stateName, data }) {
+      state[stateName] = data
+    }
+  },
+  actions: {
+    async getData ({ commit }, { stateName, endpoint }) {
+      const request = await Vue.http.get(endpoint)
+      console.log(request)
+      commit('setData', { stateName: stateName, data: request.data })
+    }
   }
 })
 

@@ -5,13 +5,20 @@
         <b-form-input v-model="searchTerm" type="text" size="lg"
                       :placeholder="'Search for ' + name + '...'"></b-form-input>
         <div class="my-2">
-            <div v-for="(key, filter) of filters" :key="filter">
-                <multiselect placeholder="'Sort by ' + filter + '...'"></multiselect>
+            <div v-for="(filter, key) of filters" :key="key">
+                <multiselect class="my-1"
+                             :placeholder="'Sort by ' + filter + '...'" 
+                             :options="[]" v-model="filter.selected"></multiselect>
             </div>
         </div>
         <div class="my-2">
-            <div v-for="(key, item) of items" :key="key">
-                <p class="text-bold">{{ item.name }}</p>
+            <div v-for="(key, item) of items" :key="key" class="list-group">
+                <a class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h6>{{ item.name }}</h6>
+                        <small>{{ item.source }}</small>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
