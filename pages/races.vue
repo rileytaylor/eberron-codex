@@ -1,7 +1,10 @@
 <template>
     <div class="row container-fluid mt-4">
         <div class="col-md-4">
-            <list :name="'races'" :filters="filters" :items="items">
+            <list :name="'races'" :filters="filters" :items="items" @selection="setSelected">
+                <div slot="list-item-addons">
+                    <p class="mb-0">{{ item.ability }}</p>
+                </div>
             </list>
         </div>
         <div class="col-md-8">
@@ -24,7 +27,12 @@ export default {
                 'size',
                 'source'
             ],
-            items: ['one', 'two']
+            selected: undefined
+        }
+    },
+    computed: {
+        items () { 
+            return this.$store.state.races.race
         }
     },
     components: {
@@ -34,7 +42,10 @@ export default {
     methods: {
         ...mapActions([
             'getData'
-        ])
+        ]),
+        setSelected (item) {
+            this.selected = item
+        }
     },
     mounted () {
         this.getData({ stateName:'races', endpoint: endpoints.races })

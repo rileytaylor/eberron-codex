@@ -12,13 +12,15 @@
             </div>
         </div>
         <div class="my-2">
-            <div v-for="(key, item) of items" :key="key" class="list-group">
-                <a class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="list-group">
+                <button v-for="item of items" :key="item.name" @click="selectItem"
+                    class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">
                         <h6>{{ item.name }}</h6>
                         <small>{{ item.source }}</small>
                     </div>
-                </a>
+                    <slot name="list-item-addons"></slot>
+                </button>
             </div>
         </div>
     </div>
@@ -40,7 +42,7 @@ export default {
             required: true
         },
         items: {
-            type: Array,
+            type: [Array, undefined],
             required: true
         },
         filters: {
@@ -50,6 +52,11 @@ export default {
     },
     components: {
         Multiselect
+    },
+    methods: {
+        selectItem (item) {
+            this.emit('selection', item)
+        }
     }
 }
 </script>

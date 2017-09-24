@@ -24,7 +24,6 @@ export default {
     mounted () {
         this.getData({ stateName:'items', endpoint: endpoints.items })
     }
-
 }
 </script>
 

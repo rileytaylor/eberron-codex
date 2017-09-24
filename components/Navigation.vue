@@ -9,20 +9,20 @@
 
         <b-collapse is-nav id="nav_collapse">
             <b-nav is-nav-bar>
-                <b-nav-item href="index">Home</b-nav-item>
-                <b-nav-item href="rules">Rules</b-nav-item>
-                <b-nav-item href="library">Library</b-nav-item>
+                <b-nav-item to="/">Home</b-nav-item>
+                <b-nav-item to="rules">Rules</b-nav-item>
+                <b-nav-item to="library">Library</b-nav-item>
                 <b-nav-item-dropdown text="Player Options">
-                    <b-dropdown-item href="races">Races</b-dropdown-item>
-                    <b-dropdown-item href="classes">Classes</b-dropdown-item>
-                    <b-dropdown-item href="backgrounds">Backgrounds</b-dropdown-item>
-                    <b-dropdown-item href="feats">Feats</b-dropdown-item>
+                    <b-dropdown-item to="races">Races</b-dropdown-item>
+                    <b-dropdown-item to="classes">Classes</b-dropdown-item>
+                    <b-dropdown-item to="backgrounds">Backgrounds</b-dropdown-item>
+                    <b-dropdown-item to="feats">Feats</b-dropdown-item>
                 </b-nav-item-dropdown>
                 <b-nav-item-dropdown text="References">
-                    <b-dropdown-item href="monsters">Monsters</b-dropdown-item>
-                    <b-dropdown-item href="items">Items</b-dropdown-item>
-                    <b-dropdown-item href="spells">Spells</b-dropdown-item>
-                    <b-dropdown-item href="conditions">Conditions</b-dropdown-item>
+                    <b-dropdown-item to="monsters">Monsters</b-dropdown-item>
+                    <b-dropdown-item to="items">Items</b-dropdown-item>
+                    <b-dropdown-item to="spells">Spells</b-dropdown-item>
+                    <b-dropdown-item to="conditions">Conditions</b-dropdown-item>
                 </b-nav-item-dropdown>
             </b-nav>
 
